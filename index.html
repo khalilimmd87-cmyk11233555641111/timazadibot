@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>پنل مدیریت ربات ناشناس</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="login-screen" class="screen">
+  <form id="login-form" class="login-card">
+    <h1>ورود به پنل مدیریت</h1>
+    <input type="text" id="username" placeholder="نام کاربری" autocomplete="username" required />
+    <input type="password" id="password" placeholder="رمز عبور" autocomplete="current-password" required />
+    <button type="submit">ورود</button>
+    <p id="login-error" class="error"></p>
+  </form>
+</div>
+
+<div id="dashboard-screen" class="screen hidden">
+  <header class="topbar">
+    <h1>پیام‌های ناشناس</h1>
+    <button id="logout-btn" class="ghost-btn">خروج</button>
+  </header>
+
+  <div class="filters">
+    <input type="text" id="search-input" placeholder="جستجو در متن پیام یا نام کاربر..." />
+    <select id="user-filter">
+      <option value="">همه کاربرها</option>
+    </select>
+    <span id="total-count" class="total-count"></span>
+  </div>
+
+  <div id="messages-list" class="messages-list"></div>
+
+  <div class="pagination">
+    <button id="prev-page" class="ghost-btn">قبلی</button>
+    <span id="page-info"></span>
+    <button id="next-page" class="ghost-btn">بعدی</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
